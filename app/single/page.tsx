@@ -129,7 +129,7 @@ export default function SinglePage() {
             <div className="text-red-600 text-sm">{(result as any).error}</div>
           ) : (
             <div className="text-sm space-y-1">
-              <div>Setup: £{result.setup?.toFixed(2)}</div>
+              <div>Setup: £{('setup' in result ? result.setup : 0).toFixed(2)}</div>
               <div>Materials: £{result.materials?.toFixed(2)}</div>
               <div>Ink: £{result.ink?.toFixed(2)}</div>
               <div>Cutting: £{result.cutting?.toFixed(2)}</div>
